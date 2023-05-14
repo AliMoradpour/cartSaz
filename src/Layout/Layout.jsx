@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import Info from "../components/Info";
 import Header from "../components/Header";
 
 const Layout = ({ children }) => {
@@ -6,6 +8,8 @@ const Layout = ({ children }) => {
       <div className="max-w-[1250px] w-full px-[32px]">
         <Header />
         {children}
+        <Info />
+        <Footer />
       </div>
     </main>
   );

@@ -3,7 +3,7 @@ import logo from "../assets/image/logo.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-10 right-10 z-10 bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
+    <header className="bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
       <img src={logo} alt="logo" />
       <div className="flex items-center">
         <NavLink

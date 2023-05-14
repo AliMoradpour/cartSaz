@@ -3,7 +3,7 @@ import Hr from "../../components/Hr";
 
 const Intro = () => {
   return (
-    <div className="mt-48">
+    <div className="mt-28">
       <div className="relative flex justify-center">
         <div className="-mt-12">
           <img src={tLogo} alt="logo" className="w-[361px] h-[372px]" />
@@ -13,7 +13,7 @@ const Intro = () => {
           <br />
           سفارش های اینترنتی
         </h1>
-        <button className="absolute bottom-32 md:bottom-20 flex p-5 bg-primary text-white rounded-full text-Overline-LG">
+        <button className="absolute bottom-32 md:bottom-20 flex p-3 md:p-5 bg-primary text-white rounded-full text-Overline-LG">
           <span className="ml-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const Intro = () => {
           </span>
           <span>مشاهده ویدئو معرفی</span>
         </button>
-        <p className="absolute bottom-0 w-[350px] text-center md:w-[809px] md:text-Body-MD text-Body-SM font-light md:font-normal">
+        <p className="absolute bottom-0 w-[350px] flex text-center md:w-[700px] md:text-Body-MD text-Body-SM font-light md:font-normal">
           کارت ساز آمده تا دیگر نیازی به یادداشت سفارش های خود در دفتر و یا
           سررسید نباشید.به راحتی سفارشات خود را مدیریت کنید و آن ها را تعیین
           وضعیت کنید.حتی به راحتی برگه ارسال پرینت کنید و آن را اختصاصی استفاده

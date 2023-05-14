@@ -24,7 +24,7 @@ const DisplayMode = () => {
           <img
             src={phone}
             alt="phone"
-            className="w-[105px] md:w-[234px] absolute bottom-0 -left-10"
+            className="w-[90px] md:w-[234px] absolute bottom-0 -left-6"
           />
         </div>
       </div>
