@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Updates from "./pages/Updates";
+import Updates from "./pages/Updates/Updates";
 import App from "./App";
 import "./index.css"
 
