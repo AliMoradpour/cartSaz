@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: IranYekan;
-  src: url(assets/IRANYekan/IRANYekanRegular.ttf);
+  src: url(assets/font/IRANYekanRegular.ttf);
 }
 body {
   font-family: IranYekan;

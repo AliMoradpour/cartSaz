@@ -6,7 +6,7 @@ const Header = () => {
     <header className="flex items-center my-5 justify-between">
       <img src={logo} alt="logo" />
       <div className="flex items-center">
-        <Link to="login" className="hidden md:block mx-2 text-main-black">
+        <Link to="updates" className="hidden md:block mx-2 text-main-black">
           آپدیت ها
         </Link>
         <Link to="login" className="hidden md:block mx-2 text-main-black">
@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
         <Link
           to="login"
-          className="border border-3 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white">
+          className="border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all">
           ورود یا ثبت نام
         </Link>
       </div>
