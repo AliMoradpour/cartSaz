@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url(./assets/font/font.css);
 body {
-	font-family: iranyekan !important;
-	direction: rtl;
+	font-family: 'Vazirmatn', sans-serif;
 }
