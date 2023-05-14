@@ -34,7 +34,7 @@ export default {
         secondary: "#FE3E01",
         "main-black": "#171F26",
         "blue-100": "#DFEFFF",
-        "blue-200": "#090325",
+        "blue-200": "#60B1FE",
         "blue-300": "#0172DE",
         "orange-100": "#FFE7DF",
         "orange-200": "#FE8660",
