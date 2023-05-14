@@ -3,7 +3,7 @@ import Hr from "../../components/Hr";
 
 const Intro = () => {
   return (
-    <div className="mt-44">
+    <div className="mt-48">
       <div className="relative flex justify-center">
         <div className="-mt-12">
           <img src={tLogo} alt="logo" className="w-[361px] h-[372px]" />

@@ -1,25 +1,49 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
 const Header = () => {
   return (
-    <header className="flex items-center my-5 justify-between">
+    <header className="fixed top-0 left-10 right-10 z-10 bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
       <img src={logo} alt="logo" />
       <div className="flex items-center">
-        <Link to="updates" className="hidden md:block mx-2 text-main-black">
+        <NavLink
+          to="/updates"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-primary mx-2"
+              : "hidden md:block mx-2 text-main-black"
+          }>
           آپدیت ها
-        </Link>
-        <Link to="login" className="hidden md:block mx-2 text-main-black">
+        </NavLink>
+        <NavLink
+          to="/faq"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-primary mx-2"
+              : "hidden md:block mx-2 text-main-black"
+          }>
           سوالات متداول
-        </Link>
-        <Link to="login" className="hidden md:block mx-2 text-main-black">
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-primary mx-2"
+              : "hidden md:block mx-2 text-main-black"
+          }>
           تماس با ما
-        </Link>
-        <Link
-          to="login"
+        </NavLink>
+        <NavLink
+          to="/login"
           className="border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all">
           ورود یا ثبت نام
-        </Link>
+        </NavLink>
       </div>
     </header>
   );

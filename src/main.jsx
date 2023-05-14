@@ -4,9 +4,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Updates from "./pages/Updates/Updates";
-import App from "./App";
 import "./index.css"
+import App from "./App";
+import Updates from "./pages/Updates/Updates";
+import Faq from "./pages/Faq/Faq"
+import Contact from "./pages/Contact/Contact"
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
   {
     path: "updates",
     element: <Updates />,
+  },
+  {
+    path: "faq",
+    element: <Faq />,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
   },
 ]);
 
