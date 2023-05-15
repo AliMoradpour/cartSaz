@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css"
-import App from "./App";
+import Home from "./pages/Home/Home";
 import Updates from "./pages/Updates/Updates";
 import Faq from "./pages/Faq/Faq"
 import Contact from "./pages/Contact/Contact"
@@ -13,7 +13,7 @@ import Contact from "./pages/Contact/Contact"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "updates",

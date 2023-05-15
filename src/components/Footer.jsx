@@ -48,10 +48,10 @@ const Footer = () => {
         </NavLink>
       </div>
       <div className="flex items-center">
-        <span className="ml-5 border-[1.5px] p-2 rounded-full cursor-pointer">
-          <img src={instagram} alt="instagram logo" />
+        <span className="ml-5 border-[1.5px] p-2 rounded-full cursor-pointer hover:border-[#D12879] grayscale hover:grayscale-0">
+          <img src={instagram} alt="instagram logo"/>
         </span>
-        <span className="border-[1.5px] p-2 rounded-full cursor-pointer">
+        <span className="border-[1.5px] p-2 rounded-full cursor-pointer hover:border-primary grayscale hover:grayscale-0">
           <img src={telegram} alt="telegram logo" />
         </span>
       </div>

@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink , Link } from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
 const Header = () => {
   return (
     <header className="bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
+    <Link to="/">
       <img src={logo} alt="logo" />
+    </Link>
       <div className="flex items-center">
         <NavLink
           to="/updates"
@@ -12,7 +14,7 @@ const Header = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-primary mx-2"
+              ? "text-primary mx-2 hidden md:block"
               : "hidden md:block mx-2 text-main-black"
           }>
           آپدیت ها
@@ -23,7 +25,7 @@ const Header = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-primary mx-2"
+              ? "text-primary mx-2 hidden md:block"
               : "hidden md:block mx-2 text-main-black"
           }>
           سوالات متداول
@@ -34,7 +36,7 @@ const Header = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-primary mx-2"
+              ? "text-primary mx-2 hidden md:block"
               : "hidden md:block mx-2 text-main-black"
           }>
           تماس با ما
