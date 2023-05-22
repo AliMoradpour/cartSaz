@@ -42,7 +42,7 @@ const Header = () => {
           تماس با ما
         </NavLink>
         <NavLink
-          to="/login"
+          to="/signup"
           className="border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all">
           ورود یا ثبت نام
         </NavLink>

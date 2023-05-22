@@ -24,17 +24,21 @@ const ContactCart = () => {
       </h4>
       <div className="flex flex-col-reverse items-center md:flex-row justify-between">
         <div>
-          <span className="flex items-center text-Body-MD font-bold mt-7 border-2 border-[#D12879] text-[#D12879] p-3 md:py-4 md:px-24 rounded-xl">
+          <span className="flex items-center justify-center cursor-pointer text-Body-MD font-bold mt-7 border-2 border-[#D12879] text-[#D12879] p-3 md:py-4 md:px-24 rounded-xl">
             <img src={instagram} alt="instagram logo" className="ml-2" /> پیام
             در اینستاگرام
           </span>
-          <span className="flex items-center text-Body-MD font-bold my-7 border-2 border-[#2FDB9D] text-[#2FDB9D] p-3 md:py-4 md:px-24 rounded-xl mb-16">
+          <span className="flex items-center justify-center cursor-pointer text-Body-MD font-bold my-7 border-2 border-[#2FDB9D] text-[#2FDB9D] p-3 md:py-4 md:px-24 rounded-xl mb-16">
             <img src={whatsapp} alt="whatsapp logo" className="ml-2" /> تماس در
             واتس اپ
           </span>
           <span>
-            <p className="text-Body-MD text-main-black mb-4">همچنین میتوانید از ایمیل زیر جهت ارسال پیام استفاده کنید :</p>
-            <p className="text-[20px] text-primary underline">Cartsaz.Com@Gmail.Com</p>
+            <p className="text-Body-MD text-main-black mb-4">
+              همچنین میتوانید از ایمیل زیر جهت ارسال پیام استفاده کنید :
+            </p>
+            <p className="text-[20px] text-primary underline">
+              Cartsaz.Com@Gmail.Com
+            </p>
           </span>
         </div>
         <div className="text-primary bg-blue-100 p-8 rounded-full shadow-inner shadow-blue-200 mt-10">
@@ -50,7 +54,6 @@ const ContactCart = () => {
             />
           </svg>
         </div>
-
       </div>
     </div>
   );

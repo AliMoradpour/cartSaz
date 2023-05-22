@@ -1,5 +1,6 @@
 import Hr from "./Hr";
 import signinPic from "../assets/image/signIn.png";
+import Layout from "../Layout/Layout";
 
 const Signin = () => {
   return (

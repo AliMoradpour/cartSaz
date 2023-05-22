@@ -9,8 +9,14 @@ body {
 }
 
 .heart {
-	font-size: 20px;
-	animation: heartbeat ease-in-out infinite 1.2s; 
+  font-size: 20px;
+  animation: heartbeat ease-in-out infinite 1.2s;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @keyframes heartbeat {
