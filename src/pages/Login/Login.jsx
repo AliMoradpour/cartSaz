@@ -1,14 +1,22 @@
 import iran from "../../assets/image/iran.png";
 import columnLogo from "../../assets/image/column-logo.png";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
+import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
 
-const Login = ({ setUserInfo }) => {
+const Login = () => {
+  const navigate = useNavigate();
+  const userInfo = useUserInfo();
+  const setUserInfo = useUserInfoActions();
+  
   const inputHandler = ({ target }) => {
-    setUserInfo({ ...pervState, [target.name]: target.value });
+    setUserInfo({ ...userInfo, [target.name]: target.value });
   };
 
-  const submitHandler = () => {
-    e.preventDefualt();
+
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    navigate("/shop")
   };
 
   return (
@@ -20,7 +28,8 @@ const Login = ({ setUserInfo }) => {
       <p className="text-Body-SM font-light my-3">
         جهت ورود به پنل ابتدا شماره تماس خود را وارد کنید
       </p>
-      <span className="flex flex-row-reverse items-center justify-center border-2 p-2 rounded-lg">
+      <form onSubmit={submitHandler}>
+      <div className="flex flex-row-reverse items-center justify-center border-2 p-2 rounded-lg">
         <img src={iran} alt="iran" className="w-5 h-5 rounded-full" />
         <p className="text-Caption-md font-bold ml-3 mt-1">۹۸+</p>
         <input
@@ -29,14 +38,14 @@ const Login = ({ setUserInfo }) => {
           className="focus:outline-none border-none text-left text-Caption-md ml-2 mt-1"
           onChange={inputHandler}
         />
-      </span>
-      <Link
-        className="mt-10 text-white bg-primary py-4 px-32 rounded-lg text-Overline-LG"
-        to="/info"
+      </div>
+      <button
         type="submit"
-        onSubmit={submitHandler}>
+        className="mt-10 text-white bg-primary py-4 px-32 rounded-lg text-Overline-LG"
+        >
         ورود
-      </Link>
+      </button>
+      </form>
 
         <Link
           to="/signup"
