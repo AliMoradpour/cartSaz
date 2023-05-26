@@ -1,6 +1,8 @@
 const ShopContact = () => {
     return ( 
-        <div>Contact us </div>
+        <div className="w-full mx-auto">
+        contact
+        </div>
      );
 }
  

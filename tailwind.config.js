@@ -27,6 +27,7 @@ export default {
       "Button-LG": ['16px', 'auto'],
       "Button-SM": ['14px', '24px'],
       "Overline-LG": ['16px', 'auto'],
+      "Overline-SM": ['12px', '170%'],
     },
     extend: {
       colors: {
