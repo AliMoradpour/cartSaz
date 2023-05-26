@@ -76,11 +76,13 @@ const Signup = () => {
             </svg>
             ورود به حساب کاربری
           </Link>
-          <Link to="/" className="text-red-500 underline underline-offset-4 block md:hidden">
+          <Link
+            to="/"
+            className="text-red-500 underline underline-offset-4 block md:hidden">
             خروج
           </Link>
         </div>
-        <hr className="w-screen mt-4"/>
+        <hr className="w-screen mt-4" />
       </div>
 
       <form

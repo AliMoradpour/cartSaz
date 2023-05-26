@@ -6,11 +6,13 @@ import Faq from "./pages/Faq/Faq";
 import Contact from "./pages/Contact/Contact";
 import UserInfoProvider from "./Context/UserContext";
 import Signup from "./pages/signup/Signup";
+import Shop from "./pages/Shop/Shop";
 
 function App() {
   return (
     <UserInfoProvider>
       <Routes>
+        <Route path="/shop" element={<Shop />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
