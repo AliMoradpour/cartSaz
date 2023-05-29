@@ -5,7 +5,7 @@ import call from "../../assets/image/call-outline.png";
 
 const ShopContact = () => {
   return (
-    <div className="w-full flex justify-center flex-wrap gap-3">
+    <div className="w-full md:w-3/4 mx-auto flex flex-wrap gap-3">
       <div className="flex justify-between items-center bg-[#FFEEF1] p-2 rounded-lg w-full mx-10">
         <span className="flex items-center">
           <img src={instagramOutline} alt="instagram" />
@@ -55,7 +55,10 @@ const ShopContact = () => {
           </svg>
           ادرس دفتر/مغازه
         </h4>
-        <p className="mt-6 text-Body-XS font-light text-black px-10">تهران ؛ میدان ازادی ؛ بلوار استاد معین ؛ خیابان محمدی ؛ پلاک 14 واحد 2 ؛ مغازه کارت ساز</p>
+        <p className="mt-6 text-Body-XS font-light text-black px-10">
+          تهران ؛ میدان ازادی ؛ بلوار استاد معین ؛ خیابان محمدی ؛ پلاک 14 واحد 2
+          ؛ مغازه کارت ساز
+        </p>
       </div>
     </div>
   );

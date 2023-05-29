@@ -7,10 +7,13 @@ import Contact from "./pages/Contact/Contact";
 import UserInfoProvider from "./Context/UserContext";
 import Signup from "./pages/signup/Signup";
 import Shop from "./pages/Shop/Shop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <UserInfoProvider>
+      <ToastContainer />
       <Routes>
         <Route path="/shop" element={<Shop />} />
         <Route path="/signup" element={<Signup />} />

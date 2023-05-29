@@ -10,7 +10,7 @@ const ShopHeader = () => {
             فروشگاه کارت ساز
           </h5>
           <p className="text-Body-XS font-light text-white">
-            فروش پیرهن,کفش و البسه
+            فروش پیراهن,کفش و البسه
           </p>
         </div>
       </div>

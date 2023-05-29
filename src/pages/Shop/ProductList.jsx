@@ -1,7 +1,13 @@
+import {useUserInfo, useUserInfoActions} from "../../Context/UserContext"
+
 const ProductList = () => {
-    return ( 
-        <div>productt list</div>
-     );
-}
- 
+  const userInfo = useUserInfo()
+  const setUserInfo = useUserInfoActions();
+  console.log(localStorage.getItem(userInfo))
+
+  return <div>
+    {userInfo.shopName}
+  </div>;
+};
+
 export default ProductList;

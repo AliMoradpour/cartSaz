@@ -4,15 +4,7 @@ import Input from "./Input";
 import SelectComponent from "./SelectComponent";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
-
-const selectOptions = [
-  { label: "انتخاب شود", value: "" },
-  { label: "پوشاک", value: "clothing" },
-  { label: "خوراکی", value: "edible" },
-  { label: "لوازم خانگی", value: "homeAppliances" },
-  { label: "لوازم یدکی", value: "spareParts" },
-  { label: "تکنولوژی", value: "technology" },
-];
+import {toast} from "react-toastify";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("اسم رو وارد نکردی !").min(5, "حداقل 5 کاراکتر"),
@@ -26,7 +18,7 @@ const validationSchema = Yup.object({
     .required("شماره بده پاره کنیم :)")
     .matches(/^[0-9]{11}$/, "تعدادش کمه که")
     .nullable(),
-  TypeofActivity: Yup.string().required("توی کدوم حوزه فعالیت میکنی؟"),
+  typeofActivity: Yup.string().required("توی کدوم حوزه فعالیت میکنی؟"),
 });
 
 const Signup = () => {
@@ -36,6 +28,7 @@ const Signup = () => {
 
   const onSubmit = () => {
     setUserInfo(userInfo);
+    toast.success(` (: ❤️ ${userInfo.name} عزیز خوش اومدی `)
     navigate("/shop");
   };
 
@@ -43,8 +36,8 @@ const Signup = () => {
     name: "",
     instagramId: "",
     shopName: "",
-    number: "",
-    TypeofActivity: "",
+    number: 0,
+    typeofActivity: "",
   };
 
   const formik = useFormik({
@@ -112,11 +105,7 @@ const Signup = () => {
             formik={formik}
             placeholder="09xxxxxxxxx"
           />
-          <SelectComponent
-            formik={formik}
-            selectOptions={selectOptions}
-            name="TypeofActivity"
-          />
+          <SelectComponent formik={formik} name="typeofActivity" />
           <button
             type="submit"
             disabled={!formik.isValid}

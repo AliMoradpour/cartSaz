@@ -1,7 +1,7 @@
 const ShopSearch = () => {
   return (
-    <div className="mx-10 flex justify-center my-6">
-      <span className="flex items-center border-2 w-full rounded-lg py-2 px-4">
+    <div className="mx-10 flex justify-center md:justify-start xl:mr-28 xl:-mt-12 my-6">
+      <span className="flex items-center border-2 w-full md:w-1/2 rounded-lg py-2 px-4 bg-white focus:shadow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -18,7 +18,7 @@ const ShopSearch = () => {
 
         <input
           type="text"
-          className="placeholder:text-Overline-SM placeholder:text-[#cbcbcb] mr-3 w-full outline-none text-Overline-SM"
+          className="placeholder:text-Overline-SM placeholder:text-[#cbcbcb] mr-3 w-full outline-none text-Overline-SM bg-transparent"
           placeholder="جستجو محصول مورد نظر ..."
         />
       </span>

@@ -1,11 +1,20 @@
 import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
 
-const SelectComponent = ({ selectOptions, name, formik }) => {
+const SelectComponent = ({ name, formik }) => {
   const useInfo = useUserInfo();
   const setUseInfo = useUserInfoActions();
+  
+  const selectOptions = [
+    { label: "انتخاب شود", value: "" },
+    { label: "پوشاک", value: "clothing" },
+    { label: "خوراکی", value: "edible" },
+    { label: "لوازم خانگی", value: "homeAppliances" },
+    { label: "لوازم یدکی", value: "spareParts" },
+    { label: "تکنولوژی", value: "technology" },
+  ];
 
   const onChange = ({ target }) => {
-    setUseInfo({ ...useInfo, [target.name]: target.value });
+    setUseInfo({ TypeofActivity: target.value });
   };
 
   return (

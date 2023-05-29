@@ -9,7 +9,7 @@ const UserInfoProvider = ({ children }) => {
     instagramId: "",
     shopName: "",
     number: "",
-    TypeofActivity: "",
+    typeofActivity: "",
   });
 
   return (

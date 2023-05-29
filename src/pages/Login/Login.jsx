@@ -55,6 +55,11 @@ const Login = () => {
             type="number"
           />
         </div>
+        {formik.errors.number && formik.touched.number && (
+          <span className="text-Caption-md font-bold text-red-500">
+            {formik.errors.number}
+          </span>
+        )}
         <button
           type="submit"
           disabled={!formik.isValid}

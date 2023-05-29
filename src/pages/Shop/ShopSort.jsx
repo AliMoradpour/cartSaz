@@ -2,7 +2,7 @@
 const ShopSort = ({isClicked , setIsClicked}) => {
   return (
     <>
-      <div className="w-full md:w-[800px] mx-auto">
+      <div className="w-full md:w-[500px] mx-auto md:ml-[100px]">
         <div className="bg-white flex justify-evenly items-center mx-10 py-4 rounded-xl -mt-8 border shadow">
           <button onClick={() => setIsClicked("products")} className="relative">
             <p
