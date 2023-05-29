@@ -1,14 +1,18 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
 import Updates from "./pages/Updates/Updates";
 import Faq from "./pages/Faq/Faq";
 import Contact from "./pages/Contact/Contact";
 import UserInfoProvider from "./Context/UserContext";
+import Login from "./pages/Login/Login";
 import Signup from "./pages/signup/Signup";
+import Dashboard from "./pages/DashBoard/Dashboard";
 import Shop from "./pages/Shop/Shop";
-import { ToastContainer } from "react-toastify";
+
+
 import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   return (
@@ -16,6 +20,7 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/shop" element={<Shop />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
