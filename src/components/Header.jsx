@@ -1,12 +1,14 @@
-import { NavLink , Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/image/logo.png";
 
 const Header = () => {
+  const userInfo = localStorage.getItem("userInfo");
+
   return (
     <header className="bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
-    <Link to="/">
-      <img src={logo} alt="logo" />
-    </Link>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <div className="flex items-center">
         <NavLink
           to="/updates"
@@ -42,9 +44,11 @@ const Header = () => {
           تماس با ما
         </NavLink>
         <NavLink
-          to="/signup"
-          className="border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all">
-          ورود یا ثبت نام
+          to={userInfo.length ? "/dashboard" : "/signup"}
+          className={`border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all ${
+            userInfo.length && "bg-primary text-white"
+          }`}>
+          {userInfo.length ? "ورود به داشبورد" : "ورود یا ثبت نام"}
         </NavLink>
       </div>
     </header>

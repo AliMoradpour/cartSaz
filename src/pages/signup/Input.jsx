@@ -1,12 +1,12 @@
 import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
 
 const Input = ({ label, name, formik, type = "text", placeholder }) => {
-  const useInfo = useUserInfo();
-  const setUseInfo = useUserInfoActions();
+  const userInfo = useUserInfo();
+  const setUserInfo = useUserInfoActions();
 
   const onChange = ({ target }) => {
-    setUseInfo({ ...useInfo, [target.name]: target.value });
-    localStorage.setItem("useInfo" , JSON.stringify(useInfo))
+    setUserInfo({ ...userInfo, [target.name]: target.value });
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
   };
 
   return (

@@ -19,7 +19,7 @@ const Login = () => {
 
   const onSubmit = () => {
     setUserInfo(userInfo);
-    navigate("/shop");
+    navigate("/dashboard");
   };
 
   const initialValues = {

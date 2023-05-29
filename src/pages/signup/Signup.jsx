@@ -4,7 +4,7 @@ import Input from "./Input";
 import SelectComponent from "./SelectComponent";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("اسم رو وارد نکردی !").min(5, "حداقل 5 کاراکتر"),
@@ -28,15 +28,15 @@ const Signup = () => {
 
   const onSubmit = () => {
     setUserInfo(userInfo);
-    toast.success(` (: ❤️ ${userInfo.name} عزیز خوش اومدی `)
-    navigate("/shop");
+    toast.success(` (: ❤️ ${userInfo.name} عزیز خوش اومدی `);
+    navigate("/dashboard");
   };
 
   const initialValues = {
     name: "",
     instagramId: "",
     shopName: "",
-    number: 0,
+    number: "",
     typeofActivity: "",
   };
 
