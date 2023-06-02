@@ -5,6 +5,7 @@ const Dashboard = () => {
   return (
     <>
       <Dheader />
+      <hr />
       <div className="flex items-center">
       <DashboardMenu />
       <h2>Main Dashboard</h2>
