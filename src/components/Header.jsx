@@ -1,8 +1,14 @@
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/image/logo.png";
+import { useUserInfo } from "../Context/UserContext";
 
 const Header = () => {
-  const userInfo = localStorage.getItem("userInfo");
+  let userInfo = {};
+  if (userInfo.length) {
+    userInfo = useUserInfo();
+  } else if (!userInfo.length) {
+    userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  }
 
   return (
     <header className="bg-white md:left-20 md:right-20 flex items-center py-5 justify-between">
@@ -44,11 +50,11 @@ const Header = () => {
           تماس با ما
         </NavLink>
         <NavLink
-          to={userInfo.length ? "/dashboard" : "/signup"}
+          to={userInfo != null ? "/dashboard" : "/signup"}
           className={`border border-3 mr-8 border-primary text-primary rounded-[8px] py-2 px-4 hover:bg-primary hover:text-white transition-all ${
-            userInfo.length && "bg-primary text-white"
+            userInfo != null && "bg-primary text-white"
           }`}>
-          {userInfo.length ? "ورود به داشبورد" : "ورود یا ثبت نام"}
+          {userInfo != null ? "ورود به داشبورد" : "ورود یا ثبت نام"}
         </NavLink>
       </div>
     </header>

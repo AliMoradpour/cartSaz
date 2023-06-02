@@ -5,7 +5,7 @@ const UserInfoContextDispatcher = createContext();
 
 const UserInfoProvider = ({ children }) => {
   const [user, setUser] = useState({});
-  
+
   return (
     <UserInfoContext.Provider value={user}>
       <UserInfoContextDispatcher.Provider value={setUser}>
