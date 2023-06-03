@@ -5,7 +5,7 @@ import call from "../../../assets/image/call-outline.png";
 
 const ShopContact = () => {
   return (
-    <div className="w-full md:w-3/4 mx-auto flex flex-wrap gap-3">
+    <div className="w-full md:w-1/2 mx-auto flex flex-wrap gap-3">
       <div className="flex justify-between items-center bg-[#FFEEF1] p-2 rounded-lg w-full mx-10">
         <span className="flex items-center">
           <img src={instagramOutline} alt="instagram" />

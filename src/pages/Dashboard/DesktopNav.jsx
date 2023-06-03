@@ -4,17 +4,17 @@ const DesktopNav = ({ setNav, nav }) => {
   };
 
   return (
-    <div className="fixed top-50 right-10 border-2 bg-white rounded-lg">
-      <div className="flex flex-col items-center justify-center w-96 max-w-xl">
+    <div className="fixed top-52 right-10 border-2 bg-white rounded-lg">
+      <div className="flex flex-col w-44 max-w-xl">
         <button
-          className="mx-5 px-4 flex flex-col items-center justify-center relative"
+          className="my-5 px-4 flex items-center relative"
           onClick={() => navHandler("home")}>
           <span
-            className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
+            className={`h-14 rounded-bl-lg rounded-tl-lg w-2 bg-primary absolute right-0 ${
               nav != "home" && "hidden"
             }`}></span>
           <div
-            className={`py-4 flex flex-col items-center ${
+            className={`py-4 flex  items-center ${
               nav == "home" && "text-primary"
             }`}>
             {nav === "home" ? (
@@ -45,18 +45,18 @@ const DesktopNav = ({ setNav, nav }) => {
                 </svg>
               </span>
             )}
-            <p className="text-Overline-LG font-light">خانه</p>
+            <p className="text-Overline-LG font-light mr-2 mt-1">خانه</p>
           </div>
         </button>
         <button
-          className="mx-5 flex flex-col items-center justify-center relative"
+          className="my-5 px-4 flex items-center relative"
           onClick={() => navHandler("carts")}>
           <span
-            className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
+            className={`h-14 rounded-bl-lg rounded-tl-lg w-2 bg-primary absolute right-0 ${
               nav != "carts" && "hidden"
             }`}></span>
           <div
-            className={`py-4 flex flex-col items-center ${
+            className={`py-4 flex  items-center ${
               nav == "carts" && "text-primary"
             }`}>
             {nav === "carts" ? (
@@ -90,18 +90,18 @@ const DesktopNav = ({ setNav, nav }) => {
                 </svg>
               </span>
             )}
-            <p className="text-Overline-LG font-light">سبدخرید ها</p>
+            <p className="text-Overline-LG font-light mr-2 mt-1">سبدخرید ها</p>
           </div>
         </button>
         <button
-          className="mx-5 flex flex-col items-center justify-center relative"
+          className="my-5 px-4 flex items-center relative"
           onClick={() => navHandler("products")}>
           <span
-            className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
+            className={`h-14 rounded-bl-lg rounded-tl-lg w-2 bg-primary absolute right-0 ${
               nav != "products" && "hidden"
             }`}></span>
           <div
-            className={`py-4 flex flex-col items-center ${
+            className={`py-4 flex  items-center ${
               nav == "products" && "text-primary"
             }`}>
             {nav === "products" ? (
@@ -131,18 +131,18 @@ const DesktopNav = ({ setNav, nav }) => {
                 </svg>
               </span>
             )}
-            <p className="text-Overline-LG font-light">محصولات</p>
+            <p className="text-Overline-LG font-light mr-2 mt-1">محصولات</p>
           </div>
         </button>
         <button
-          className="mx-5  flex flex-col items-center justify-center relative"
+          className="my-5 px-4 flex items-center  relative"
           onClick={() => navHandler("profile")}>
           <span
-            className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
+            className={`h-14 rounded-bl-lg rounded-tl-lg w-2 bg-primary absolute right-0 ${
               nav != "profile" && "hidden"
             }`}></span>
           <div
-            className={`py-4 flex flex-col items-center ${
+            className={`py-4 flex  items-center ${
               nav == "profile" && "text-primary"
             }`}>
             {nav === "profile" ? (
@@ -176,7 +176,7 @@ const DesktopNav = ({ setNav, nav }) => {
                 </svg>
               </span>
             )}
-            <p className="text-Overline-LG font-light">پروفایل</p>
+            <p className="text-Overline-LG font-light mr-2 mt-1">پروفایل</p>
           </div>
         </button>
       </div>

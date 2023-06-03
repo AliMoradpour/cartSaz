@@ -1,4 +1,3 @@
-import { useUserInfo } from "../../../Context/UserContext";
 import Hr from "../../../components/Hr";
 import Cart from "./Carts";
 import CartsHeader from "./CartsHeader";
