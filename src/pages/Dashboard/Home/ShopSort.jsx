@@ -12,7 +12,7 @@ const ShopSort = ({isClicked , setIsClicked}) => {
               محصولات
             </p>
             <span
-              className={`w-[150px] h-1  rounded-tr-xl rounded-tl-xl p-1 absolute -bottom-4 -right-10 ${
+              className={`w-[140px] sm:w-[150px] h-1  rounded-tr-xl rounded-tl-xl p-1 absolute -bottom-4 -right-10 ${
                 isClicked == "products" && "bg-primary"
               }`}></span>
           </button>
@@ -25,7 +25,7 @@ const ShopSort = ({isClicked , setIsClicked}) => {
               تماس با ما
             </p>
             <span
-              className={`w-[150px] h-1  rounded-tr-xl rounded-tl-xl p-1 absolute -bottom-4 -right-10 ${
+              className={`w-[140px] sm:w-[150px] h-1  rounded-tr-xl rounded-tl-xl p-1 absolute -bottom-4 -right-10 ${
                 isClicked == "contact" && "bg-primary"
               }`}></span>
           </button>

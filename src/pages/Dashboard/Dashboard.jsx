@@ -3,6 +3,7 @@ import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import CartPage from "./Carts/Index";
 import Shop from "./Home/Shop";
+import Products from "./Products/Products";
 
 const Dashboard = () => {
   const [nav, setNav] = useState("home");
@@ -13,6 +14,8 @@ const Dashboard = () => {
         return <Shop />;
       case "carts":
         return <CartPage />;
+      case "products":
+        return <Products />;
       default:
         return <Home />;
     }
@@ -21,10 +24,10 @@ const Dashboard = () => {
   return (
     <>
       {menuRender()}
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <MobileNav nav={nav} setNav={setNav} />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <DesktopNav nav={nav} setNav={setNav} />
       </div>
     </>
