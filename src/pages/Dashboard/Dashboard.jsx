@@ -1,9 +1,10 @@
 import {  useState } from "react";
 import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
-import CartPage from "./Carts/Index";
+import CartPage from "./Carts/Cart";
 import Shop from "./Home/Shop";
 import Products from "./Products/Products";
+import Profile from "./Profile/Profile";
 
 const Dashboard = () => {
   const [nav, setNav] = useState("home");
@@ -16,6 +17,8 @@ const Dashboard = () => {
         return <CartPage />;
       case "products":
         return <Products />;
+      case "profile":
+        return <Profile />;
       default:
         return <Home />;
     }

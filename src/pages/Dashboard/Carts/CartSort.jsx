@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ProductSort = () => {
+const CartSort = () => {
   const [sort, setSort] = useState("All");
 
   return (
@@ -64,4 +64,4 @@ const ProductSort = () => {
   );
 };
 
-export default ProductSort;
+export default CartSort;

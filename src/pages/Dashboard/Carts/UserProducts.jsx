@@ -1,4 +1,4 @@
-const Products = () => {
+const UserProducts = () => {
   const products = [];
   return (
     <div className="w-full mx-4 mt-6">
@@ -21,4 +21,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default UserProducts;

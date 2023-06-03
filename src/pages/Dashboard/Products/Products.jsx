@@ -1,6 +1,5 @@
 import Hr from "../../../components/Hr"
 import emptyProducts from "../../../assets/image/emptyProducts.png"
-import ProductSort from "./ProductSort"
 
 const Products = () => {
   return (
@@ -11,10 +10,8 @@ const Products = () => {
         </div>
         <hr />
         <div className="w-full flex justify-center overflow-x-hidden">
-        <ProductSort />
         </div>
-          <Hr />
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center mt-8">
           <img src={emptyProducts} alt="emptyProducts" />
         </div>
         <div className="w-full flex justify-evenly mt-16">

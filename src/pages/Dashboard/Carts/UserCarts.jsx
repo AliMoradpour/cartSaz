@@ -1,5 +1,4 @@
-const Cart = () => {
-    const carts = [];
+const UserCarts = ({cart}) => {
     return (
       <div className="w-full mx-4 mt-6">
         <h5 className="text-H5 font-bold text-black flex items-center">
@@ -8,8 +7,8 @@ const Cart = () => {
           </h5>
         <div className="w-full flex items-center justify-center my-20">
           <p className="text-Body-XS text-[#74787C]">
-            {carts.length ? (
-              carts.map((item) => <div>{item.name}</div>)
+            {cart.length ? (
+              cart.map((item) => <div>{item.name}</div>)
             ) : (
               <p className="text-Body-XS text-[#74787C]">
                 اطلاعاتی جهت نمایش وجود ندارد.
@@ -21,5 +20,5 @@ const Cart = () => {
     );
   };
   
-  export default Cart;
+  export default UserCarts;
   
