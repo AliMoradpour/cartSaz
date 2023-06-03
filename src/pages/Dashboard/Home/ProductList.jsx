@@ -1,4 +1,4 @@
-import {useUserInfo} from "../../Context/UserContext"
+import {useUserInfo} from "../../../Context/UserContext"
 
 const ProductList = () => {
   const userInfo = useUserInfo()

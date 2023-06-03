@@ -8,7 +8,6 @@ import UserInfoProvider from "./Context/UserContext";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/signup/Signup";
 import Dashboard from "./pages/DashBoard/Dashboard";
-import Shop from "./pages/Shop/Shop";
 
 
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +18,6 @@ function App() {
     <UserInfoProvider>
       <ToastContainer />
       <Routes>
-        <Route path="/shop" element={<Shop />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

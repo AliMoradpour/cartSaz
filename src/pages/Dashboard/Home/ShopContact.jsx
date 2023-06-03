@@ -1,7 +1,7 @@
-import instagramOutline from "../../assets/image/instagram-outline.png";
-import whatsappOutline from "../../assets/image/whatsapp-outline.png";
-import telegramOutline from "../../assets/image/telegram-outline.png";
-import call from "../../assets/image/call-outline.png";
+import instagramOutline from "../../../assets/image/instagram-outline.png";
+import whatsappOutline from "../../../assets/image/whatsapp-outline.png";
+import telegramOutline from "../../../assets/image/telegram-outline.png";
+import call from "../../../assets/image/call-outline.png";
 
 const ShopContact = () => {
   return (

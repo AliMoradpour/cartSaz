@@ -1,4 +1,4 @@
-import cartShop from "../../assets/image/cartShop.png";
+import cartShop from "../../../assets/image/cartShop.png";
 
 const ShopHeader = () => {
   return (

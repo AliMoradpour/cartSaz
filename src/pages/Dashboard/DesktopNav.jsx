@@ -1,15 +1,11 @@
-
-const Navigation = ({ setNav , nav}) => {
-
-
+const DesktopNav = ({ setNav, nav }) => {
   const navHandler = (e) => {
     setNav(e);
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 w-full border-t-2 bg-white">
-      <div className="flex items-center justify-center">
-        {/* HOme  */}
+    <div className="fixed top-50 right-10 border-2 bg-white rounded-lg">
+      <div className="flex flex-col items-center justify-center w-96 max-w-xl">
         <button
           className="mx-5 px-4 flex flex-col items-center justify-center relative"
           onClick={() => navHandler("home")}>
@@ -17,7 +13,10 @@ const Navigation = ({ setNav , nav}) => {
             className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
               nav != "home" && "hidden"
             }`}></span>
-          <div className={`py-4 flex flex-col items-center ${nav == "home" && "text-primary"}`}>
+          <div
+            className={`py-4 flex flex-col items-center ${
+              nav == "home" && "text-primary"
+            }`}>
             {nav === "home" ? (
               <span>
                 <svg
@@ -49,8 +48,6 @@ const Navigation = ({ setNav , nav}) => {
             <p className="text-Overline-LG font-light">خانه</p>
           </div>
         </button>
-        {/* End Home  */}
-        {/* cart  */}
         <button
           className="mx-5 flex flex-col items-center justify-center relative"
           onClick={() => navHandler("carts")}>
@@ -58,7 +55,10 @@ const Navigation = ({ setNav , nav}) => {
             className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
               nav != "carts" && "hidden"
             }`}></span>
-          <div className={`py-4 flex flex-col items-center ${nav == "carts" && "text-primary"}`}>
+          <div
+            className={`py-4 flex flex-col items-center ${
+              nav == "carts" && "text-primary"
+            }`}>
             {nav === "carts" ? (
               <span>
                 <svg
@@ -93,8 +93,6 @@ const Navigation = ({ setNav , nav}) => {
             <p className="text-Overline-LG font-light">سبدخرید ها</p>
           </div>
         </button>
-        {/* End cart  */}
-        {/* products  */}
         <button
           className="mx-5 flex flex-col items-center justify-center relative"
           onClick={() => navHandler("products")}>
@@ -102,7 +100,10 @@ const Navigation = ({ setNav , nav}) => {
             className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
               nav != "products" && "hidden"
             }`}></span>
-          <div className={`py-4 flex flex-col items-center ${nav == "products" && "text-primary"}`}>
+          <div
+            className={`py-4 flex flex-col items-center ${
+              nav == "products" && "text-primary"
+            }`}>
             {nav === "products" ? (
               <span>
                 <svg
@@ -133,8 +134,6 @@ const Navigation = ({ setNav , nav}) => {
             <p className="text-Overline-LG font-light">محصولات</p>
           </div>
         </button>
-        {/* End products  */}
-        {/* profile  */}
         <button
           className="mx-5  flex flex-col items-center justify-center relative"
           onClick={() => navHandler("profile")}>
@@ -142,7 +141,10 @@ const Navigation = ({ setNav , nav}) => {
             className={`w-20 rounded-br-lg rounded-bl-lg h-2 bg-primary absolute top-0 ${
               nav != "profile" && "hidden"
             }`}></span>
-          <div className={`py-4 flex flex-col items-center ${nav == "profile" && "text-primary"}`}>
+          <div
+            className={`py-4 flex flex-col items-center ${
+              nav == "profile" && "text-primary"
+            }`}>
             {nav === "profile" ? (
               <span>
                 <svg
@@ -177,10 +179,9 @@ const Navigation = ({ setNav , nav}) => {
             <p className="text-Overline-LG font-light">پروفایل</p>
           </div>
         </button>
-        {/* End profile  */}
       </div>
     </div>
   );
 };
 
-export default Navigation;
+export default DesktopNav;
