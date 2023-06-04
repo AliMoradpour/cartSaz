@@ -1,4 +1,3 @@
-import Hr from "../../../components/Hr"
 import emptyProducts from "../../../assets/image/emptyProducts.png"
 
 const Products = () => {

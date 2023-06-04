@@ -8,6 +8,7 @@ import UserInfoProvider from "./Context/UserContext";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/signup/Signup";
 import Dashboard from "./pages/DashBoard/Dashboard";
+import EditProfile from "./pages/Dashboard/Profile/EditProfile";
 
 
 import "react-toastify/dist/ReactToastify.css";
@@ -18,6 +19,7 @@ function App() {
     <UserInfoProvider>
       <ToastContainer />
       <Routes>
+        <Route path="/dashboard/editProfile" element={<EditProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

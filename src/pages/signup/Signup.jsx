@@ -21,6 +21,8 @@ const validationSchema = Yup.object({
   typeofActivity: Yup.string().required("توی کدوم حوزه فعالیت میکنی؟"),
 });
 
+
+
 const Signup = () => {
   const userInfo = useUserInfo();
   const setUserInfo = useUserInfoActions();
@@ -99,13 +101,17 @@ const Signup = () => {
             formik={formik}
             placeholder="مثال : موبایلینو"
           />
+          
           <Input
             label="شماره تماس"
             name="number"
             formik={formik}
             placeholder="09xxxxxxxxx"
           />
-          <SelectComponent formik={formik} name="typeofActivity" />
+          <SelectComponent
+            formik={formik}
+            name="typeofActivity"
+          />
           <button
             type="submit"
             disabled={!formik.isValid}
