@@ -4,7 +4,16 @@ const UserInfoContext = createContext();
 const UserInfoContextDispatcher = createContext();
 
 const UserInfoProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+      name: "",
+      instagramId: "",
+      shopName: "",
+      number: "",
+      typeofActivity: "",
+      email: "",
+      address: "",
+      zipcode: "",
+  });
 
   return (
     <UserInfoContext.Provider value={user}>
