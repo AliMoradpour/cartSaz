@@ -1,4 +1,12 @@
-const ShopSearch = () => {
+
+const ShopSearch = ({ setFilteredProducts, products }) => {
+  const searchHandler = ({target}) => {
+    const filteredProducts = products.filter((p) =>
+      p.name.includes(target.value)
+    );
+    setFilteredProducts(filteredProducts);
+  };
+
   return (
     <div className="mx-10 flex justify-center md:justify-start xl:mr-28 xl:-mt-12 my-6">
       <span className="flex items-center border-2 w-full md:w-1/2 rounded-lg py-2 px-4 bg-white focus:shadow">
@@ -20,6 +28,7 @@ const ShopSearch = () => {
           type="text"
           className="placeholder:text-Overline-SM placeholder:text-[#cbcbcb] mr-3 w-full outline-none text-Overline-SM bg-transparent"
           placeholder="جستجو محصول مورد نظر ..."
+          onChange={searchHandler}
         />
       </span>
     </div>
