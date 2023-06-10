@@ -7,7 +7,6 @@ const Input = ({ label, name, formik, type = "text", placeholder }) => {
 
   const onChange = ({ target }) => {
     setUserInfo({ ...userInfo, [target.name]: target.value });
-    localStorage.setItem("userInfo", JSON.stringify(userInfo));
   };
 
   return (

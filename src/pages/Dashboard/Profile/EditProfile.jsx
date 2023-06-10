@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Input from "./Input";
-import SelectComponent from "./SelectComponent";
+import Select from "react-select";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserInfo, useUserInfoActions } from "../../../Context/UserContext";
 import { toast } from "react-toastify";
@@ -28,8 +28,23 @@ const EditProfile = () => {
   const setUserInfo = useUserInfoActions();
   const navigate = useNavigate();
 
+  const selectOptions = [
+    { label: "انتخاب شود", value: "" },
+    { label: "پوشاک", value: "clothing" },
+    { label: "خوراکی", value: "food" },
+    { label: "لوازم خانگی", value: "homeAppliances" },
+    { label: "لوازم یدکی", value: "spareParts" },
+    { label: "تکنولوژی", value: "technology" },
+  ];
+
+  const onChange = (props) => {
+    const newData = { ...userInfo, typeofActivity: props.label };
+    setUserInfo(newData);
+  };
+
   const onSubmit = () => {
     setUserInfo(userInfo);
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
     toast.info(` (: ❤️اطلاعاتت ویرایش شد`);
     navigate("/dashboard");
   };
@@ -105,7 +120,11 @@ const EditProfile = () => {
             formik={formik}
             placeholder="09xxxxxxxxx"
           />
-          <SelectComponent formik={formik} name="typeofActivity" />
+          <Select
+            onChange={onChange}
+            options={selectOptions}
+            className="border-[#CBCBCB] focus:outline-primary focus:shadow focus:shadow-blue-200 rounded-lg px-2 py-1 font-light text-Caption-md"
+          />
           <Input
             label="ایمیل (اختیار)"
             name="email"

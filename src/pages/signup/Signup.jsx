@@ -1,10 +1,10 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Input from "./Input";
-import SelectComponent from "./SelectComponent";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserInfo, useUserInfoActions } from "../../Context/UserContext";
 import { toast } from "react-toastify";
+import Select from "react-select";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("اسم رو وارد نکردی !").min(5, "حداقل 5 کاراکتر"),
@@ -18,18 +18,30 @@ const validationSchema = Yup.object({
     .required("شماره بده پاره کنیم :)")
     .matches(/^[0-9]{11}$/, "تعدادش کمه که")
     .nullable(),
-  typeofActivity: Yup.string().required("توی کدوم حوزه فعالیت میکنی؟"),
 });
-
-
 
 const Signup = () => {
   const userInfo = useUserInfo();
   const setUserInfo = useUserInfoActions();
   const navigate = useNavigate();
 
+  const selectOptions = [
+    { label: "انتخاب شود", value: "" },
+    { label: "پوشاک", value: "clothing" },
+    { label: "خوراکی", value: "food" },
+    { label: "لوازم خانگی", value: "homeAppliances" },
+    { label: "لوازم یدکی", value: "spareParts" },
+    { label: "تکنولوژی", value: "technology" },
+  ];
+
+  const onChange = (props) => {
+    const newData = { ...userInfo, typeofActivity: props.label };
+    setUserInfo(newData);
+  };
+
   const onSubmit = () => {
     setUserInfo(userInfo);
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
     toast.success(` (: ❤️ ${userInfo.name} عزیز خوش اومدی `);
     navigate("/dashboard");
   };
@@ -101,16 +113,17 @@ const Signup = () => {
             formik={formik}
             placeholder="مثال : موبایلینو"
           />
-          
+
           <Input
             label="شماره تماس"
             name="number"
             formik={formik}
             placeholder="09xxxxxxxxx"
           />
-          <SelectComponent
-            formik={formik}
-            name="typeofActivity"
+          <Select
+            onChange={onChange}
+            options={selectOptions}
+            className="border-[#CBCBCB] focus:outline-primary focus:shadow focus:shadow-blue-200 rounded-lg px-2 py-1 font-light text-Caption-md"
           />
           <button
             type="submit"
