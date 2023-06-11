@@ -2,7 +2,7 @@
 
 ## Live Demo : 
 
-**alimoradpour-cartsaz.netlify.app**
+*alimoradpour-cartsaz.netlify.app*
 
 ### Working with : 
 React.js , Tailwindcss , react-router-dom , Context , swiper , axios , formik , yup
