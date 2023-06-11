@@ -8,6 +8,7 @@ import UserInfoProvider from "./Context/UserContext";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/signup/Signup";
 import Dashboard from "./pages/DashBoard/Dashboard";
+import Product from "./pages/Dashboard/Product/Product";
 import EditProfile from "./pages/Dashboard/Profile/EditProfile";
 
 
@@ -20,6 +21,7 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/dashboard/editProfile" element={<EditProfile />} />
+        <Route path="/dashboard/:id" element={<Product />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
