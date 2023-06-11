@@ -1,8 +1,7 @@
 # CartSaz
 
-## Live Demo : 
+## [Click To See Live Demo](https://www.alimoradpour-cartsaz.netlify.app)
 
-*alimoradpour-cartsaz.netlify.app*
 
 ### Working with : 
 React.js , Tailwindcss , react-router-dom , Context , swiper , axios , formik , yup
