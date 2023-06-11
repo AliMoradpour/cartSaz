@@ -1,6 +1,6 @@
 # CartSaz
 
-## [Click To See Live Demo](https://www.alimoradpour-cartsaz.netlify.app)
+## [Click To See Live Demo](alimoradpour-cartsaz.netlify.app)
 
 
 ### Working with : 
